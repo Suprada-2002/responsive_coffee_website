@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.wrapper {
+  background-image: url("./utils/coffee.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+}
+
+.wrapper nav {
+  height: 80px;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.wrapper nav .logo {
+  width: 30%;
+  font-weight: 900;
+  font-size: 1.3rem;
+}
+
+.wrapper nav .navbar {
+  width: 70%;
+}
+
+.wrapper nav .navbar .nav-link {
+  padding: 0.8rem;
+  font-weight: 400;
+}
+
+.wrapper a {
+  text-decoration: none;
+  color: #eda800;
+}
+
+.wrapper .container {
+  width: 60vw;
+  height: 50vh;
+  background-color: rgba(0, 0, 0, 0);
+  position: relative;
+}
+
+.wrapper .container .right {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 3rem;
+  background-image: url("./utils/coffee.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+}
+
+.wrapper .container .left {
+  width: 30%;
+  height: 70%;
+  position: absolute;
+  top: 1rem;
+  right: 11rem;
+  background-color: #eda800;
+  z-index: 10;
+  margin: 5rem;
+  border-radius: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.wrapper .mobile-nav {
+  display: none;
+}
+
+.wrapper .mobile-view {
+  padding: 2rem;
+  display: none;
+  width: 50vh;
+  height: 50vh;
+  color: #ebebeb;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: auto;
+}
+
+@media screen and (max-width: 1333px) {
+  .wrapper {
+    background-image: url("./utils//coffee_2.jpg");
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .wrapper nav {
+    display: none;
+  }
+  .wrapper .mobile-nav {
+    display: -ms-grid;
+    display: grid;
+    color: #eda800;
+    padding-left: 0.5rem;
+  }
+  .wrapper .container {
+    display: none;
+  }
+  .wrapper .mobile-view {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.benefits {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.925);
+}
+
+.benefits .item {
+  display: -ms-grid;
+  display: grid;
+  width: 70vw;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  -ms-grid-columns: 3fr 1fr;
+      grid-template-columns: 3fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  padding: 1rem;
+}
+
+.benefits .left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  background-color: #eda800;
+  border-radius: 8px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.925);
+  padding: 4rem;
+}
+
+.benefits .right {
+  background-image: url("./utils//back.jpg");
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 900px) {
+  .benefits .item {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr 0.5fr;
+        grid-template-rows: 1fr 0.5fr;
+  }
+  .benefits .item .left {
+    padding: 0.5rem;
+  }
+}
+
+.last {
+  width: 100vw;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: #eda800;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.last p {
+  font-weight: 800;
+}
+/*# sourceMappingURL=style.css.map */
